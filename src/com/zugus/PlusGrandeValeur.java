@@ -39,3 +39,31 @@ public class PlusGrandeValeur {
         System.out.println("Press any key to continue...");
         sc.next();
     }
+
+     /**
+     * Initialise une ArrayList avec des valeurs aleatoires.
+     *
+     * @return Une ArrayList remplie de valeurs aleatoires.
+     */
+    private static ArrayList<Integer> initArrayList() {
+        ArrayList<Integer> list = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < TAILLE; i++) {
+            list.add(random.nextInt(MAX_VALEUR + 1));
+        }
+        return list;
+    }
+
+    /**
+     * Initialise une LinkedList avec des valeurs aleatoires.
+     *
+     * @return Une LinkedList remplie de valeurs aleatoires.
+     */
+    private static LinkedList<Integer> initLinkedList() {
+        LinkedList<Integer> list = new LinkedList<>();
+        Random random = new Random();
+        for (int i = 0; i < TAILLE; i++) {
+            list.add(random.nextInt(MAX_VALEUR + 1));
+        }
+        return list;
+    }
