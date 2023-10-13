@@ -67,3 +67,15 @@ public class PlusGrandeValeur {
         }
         return list;
     }
+
+    /**
+     * Affiche les valeurs contenues dans la liste fournie.
+     *
+     * @param valeurs La liste contenant les valeurs à afficher.
+     */
+    private static void afficherValeurs(List<Integer> valeurs) {
+        System.out.println("****Affichage du tableau*****");
+        for (int i = 0; i < valeurs.size(); i++) {
+            System.out.println("tableau[" + i + "] = " + valeurs.get(i));
+        }
+    }
