@@ -79,3 +79,22 @@ public class PlusGrandeValeur {
             System.out.println("tableau[" + i + "] = " + valeurs.get(i));
         }
     }
+
+       /**
+     * Affiche la plus grande valeur de la liste fournie et son index.
+     *
+     * @param valeurs La liste contenant les valeurs a analyser.
+     */
+    private static void afficherPlusGrandeValeur(List<Integer> valeurs) {
+        int maxValeur = Integer.MIN_VALUE;
+        int indexMax = -1;
+        for (int i = 0; i < valeurs.size(); i++) {
+            if (valeurs.get(i) > maxValeur) {
+                maxValeur = valeurs.get(i);
+                indexMax = i;
+            }
+        }
+        System.out.println("Le plus grand nombre du tableau est : " + maxValeur);
+        System.out.println("Il est a l'index : " + indexMax);
+    }
+}
