@@ -1,1 +1,41 @@
-. 
+package com.zugus;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ * La classe PlusGrandeValeur permet de determiner la plus grande valeur 
+ * dans un tableau de 15 elements generes aleatoirement.
+ */
+public class PlusGrandeValeur {
+
+    private static final int TAILLE = 15;
+    private static final int MAX_VALEUR = 100;
+
+    /**
+     * Le point d entree du programme.
+     *
+     * @param args Les arguments de la ligne de commande (non utilises ici).
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Veuillez choisir une option:");
+        System.out.println("1. Utiliser ArrayList");
+        System.out.println("2. Utiliser LinkedList");
+        int choix = sc.nextInt();
+
+        List<Integer> valeurs;
+        if (choix == 1) {
+            valeurs = initArrayList();
+        } else {
+            valeurs = initLinkedList();
+        }
+
+        afficherValeurs(valeurs);
+        afficherPlusGrandeValeur(valeurs);
+        System.out.println("Press any key to continue...");
+        sc.next();
+    }
